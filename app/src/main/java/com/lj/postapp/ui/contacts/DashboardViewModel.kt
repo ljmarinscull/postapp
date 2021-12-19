@@ -1,4 +1,4 @@
-package com.lj.postapp.ui.dashboard
+package com.lj.postapp.ui.contacts
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

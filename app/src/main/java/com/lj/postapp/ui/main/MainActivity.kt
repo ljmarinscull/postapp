@@ -1,12 +1,13 @@
-package com.lj.postapp
+package com.lj.postapp.ui.main
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.lj.postapp.R
 import com.lj.postapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
