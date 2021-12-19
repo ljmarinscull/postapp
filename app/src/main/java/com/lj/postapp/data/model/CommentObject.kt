@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 data class CommentObject(
     var postId: Int? = -1,
     var id: Int? = -1,
-    var name: String? = "",
-    var email:  String? = "",
-    var body: String? = ""
+    var name: String? = "unknown",
+    var email:  String? = "unknown",
+    var body: String? = "unknown"
 ): Parcelable

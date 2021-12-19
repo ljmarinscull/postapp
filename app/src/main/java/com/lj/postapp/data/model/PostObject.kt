@@ -7,6 +7,6 @@ import kotlinx.parcelize.Parcelize
 data class PostObject(
     var id: Int? = -1,
     var userId: Int? = -1,
-    var title: String? = "",
-    var body:  String? = ""
+    var title: String? = "unknown",
+    var body:  String? = "unknown"
 ): Parcelable

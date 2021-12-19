@@ -1,7 +1,7 @@
 package com.lj.postapp
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class PostApp: Application() {
-
-}
+@HiltAndroidApp
+class PostApp: Application()
