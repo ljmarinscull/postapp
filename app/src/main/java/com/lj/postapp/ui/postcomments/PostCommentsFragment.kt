@@ -15,13 +15,11 @@ const val ARG_POSTID = "postId"
 
 class PostCommentsFragment : Fragment() {
 
+    private var _binding: FragmentPostCommentsBinding? = null
+    private val binding get() = _binding!!
+
     private lateinit var mAdapter: CommentAdapter
     private val viewModel: PostCommentsViewModel by activityViewModels()
-
-    private var _binding: FragmentPostCommentsBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
     private var postId = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +45,7 @@ class PostCommentsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupUI()
+
         viewModel.getCommentsByPostId(postId)
     }
 

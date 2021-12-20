@@ -5,7 +5,6 @@ import com.lj.postapp.data.model.PostObject
 import com.lj.postapp.utils.Result
 
 interface IMainDataSource {
-
-    suspend fun getPosts() : Result<List<PostObject>>
-    suspend fun getPostCommentsById(id: Int) : Result<List<CommentObject>>
+    suspend fun getPosts(): Result<List<PostObject>>
+    suspend fun getPostCommentsById(id: Int): Result<List<CommentObject>>
 }

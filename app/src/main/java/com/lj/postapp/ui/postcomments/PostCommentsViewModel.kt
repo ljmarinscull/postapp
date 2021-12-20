@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lj.postapp.data.model.CommentObject
-import com.lj.postapp.data.model.PostObject
 import com.lj.postapp.data.repo.IMainRepository
 import com.lj.postapp.utils.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -30,29 +29,17 @@ class PostCommentsViewModel
         _progressBarVisible.value = true
         viewModelScope.launch(Dispatchers.Main) {
 
-            val result = Result.Success(listOf(
-                CommentObject(
-                    postId = -1,
-                    id = -1,
-                    name = "Marin",
-                    email = "ljmarin@gmail.com",
-                    body = "Hola mundo , marin"
-                )
-
-            ))
-            //mainRepository.getPostCommentsById(postId)
-
+            val result = mainRepository.getPostCommentsById(postId)
             _progressBarVisible.value = false
-            _comments.value = result.data!!
 
-            /*   when (result) {
+            when (result) {
                    is Result.Success -> {
-                       _posts.value = result.data!!
+                       _comments.value = result.data!!
                    }
                    is Result.Error -> {
-                       _posts.value = emptyList()
+                       _comments.value = emptyList()
                    }
-               }*/
+               }
         }
     }
 }

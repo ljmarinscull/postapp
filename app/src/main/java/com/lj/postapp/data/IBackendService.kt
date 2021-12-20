@@ -2,7 +2,6 @@ package com.lj.postapp.data
 
 import com.lj.postapp.data.model.CommentObject
 import com.lj.postapp.data.model.PostObject
-import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
