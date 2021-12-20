@@ -113,7 +113,7 @@ class ContactsFragment : Fragment(), AdapterView.OnItemClickListener, AdapterVie
         } else {
             Toast.makeText(
                 requireContext(),
-                "Se necesitan permiso para acceder a los contactos del telefono.",
+                "Permission is required to access the phone's contacts.",
                 Toast.LENGTH_LONG
             ).show()
 
