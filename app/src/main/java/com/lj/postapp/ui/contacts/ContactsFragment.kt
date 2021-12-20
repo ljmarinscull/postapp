@@ -46,7 +46,8 @@ class ContactsFragment : Fragment(), AdapterView.OnItemClickListener, AdapterVie
 
         setupUI()
 
-        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED &&
+            ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.WRITE_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(arrayOf(
                 Manifest.permission.READ_CONTACTS,
                 Manifest.permission.WRITE_CONTACTS
